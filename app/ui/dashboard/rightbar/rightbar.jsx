@@ -1,7 +1,5 @@
-import React from "react";
-
-const rightbar = () => {
+const Rightbar = () => {
   return <div>rightbar</div>;
 };
 
-export default rightbar;
+export default Rightbar;
