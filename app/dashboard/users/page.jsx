@@ -2,6 +2,7 @@ import styles from "@/app/ui/dashboard/users/users.module.css";
 import Search from "../search/search";
 import Link from "next/link";
 import Image from "next/image";
+import Pagination from "@/app/ui/dashboard/pagination/pagination";
 
 const UsersPage = () => {
   return (
@@ -27,7 +28,13 @@ const UsersPage = () => {
           <tr>
             <td>
               <div className={styles.user}>
-                <Image src="/noavatar.png" alt="" width={40} height={40} />
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
                 Sai Rakindi
               </div>
             </td>
@@ -36,13 +43,21 @@ const UsersPage = () => {
             <td>Admin</td>
             <td>Active</td>
             <td>
-              <Link href="/">
-                <button className={`${styles.button}`}>View</button>
-              </Link>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>
+                    View
+                  </button>
+                </Link>
+                <button className={`${styles.button} ${styles.delete}`}>
+                  Delete
+                </button>
+              </div>
             </td>
           </tr>
         </tbody>
       </table>
+      <Pagination />
     </div>
   );
 };
