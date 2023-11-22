@@ -68,7 +68,7 @@ const Chart = () => {
           {/* <CartesianGrid strokeDasharray="3 3" /> */}
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
+          <Tooltip contentStyle={{ background: "#151c2c", border: "none" }} />
           <Legend />
           <Line
             type="monotone"
